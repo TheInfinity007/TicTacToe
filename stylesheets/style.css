@@ -1,1 +1,60 @@
-style
+body
+{
+	background: yellow;
+	margin-top:75px;
+	font-family: "Lucida Grande", sans-serif, Arial;
+	font-weight: 300;
+}
+#wrapper
+{
+	border: 10px solid gray;
+	margin: 0 auto;
+	display:table;
+	font-size:80px;
+	text-align:center;
+}
+.rowA
+{
+	border: 1px solid #000;
+	float:left;
+	width:100px;
+	height: 100px;
+}
+#rowB
+{
+	clear:left;
+}
+.rowB
+{
+	border: 1px solid #000;
+	float:left;
+	height: 100px;
+	width:100px;
+}
+
+#rowC
+{	
+	clear:left;
+}
+.rowC
+{
+	border: 1px solid #000;
+	float:left;
+	height: 100px;
+	width:100px;
+}
+#button
+{
+	clear: left;
+	background: #2d2d2d;
+	border: 1px solid #000;
+}
+#reset
+{
+	color:#fff;
+	background:none;
+	border:none;
+	outline: none;
+	padding: 18px 73px;
+	font-size:60px;
+}

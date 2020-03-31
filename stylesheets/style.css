@@ -1,47 +1,49 @@
 body
 {
 	background: yellow;
-	margin-top:75px;
+	margin:0;
 	font-family: "Lucida Grande", sans-serif, Arial;
 	font-weight: 300;
+	padding:0;
 }
 #wrapper
-{
+{	
 	border: 10px solid gray;
-	margin: 0 auto;
+	margin: 75px auto auto;
 	display:table;
 	font-size:80px;
 	text-align:center;
 }
-.rowA
+.cell
 {
 	border: 1px solid #000;
 	float:left;
 	width:100px;
 	height: 100px;
-}
-#rowB
-{
-	clear:left;
-}
-.rowB
-{
-	border: 1px solid #000;
-	float:left;
-	height: 100px;
-	width:100px;
+	background: pink;
 }
 
-#rowC
-{	
-	clear:left;
-}
-.rowC
+#rowA .cell:nth-child(1),
+#rowB .cell:nth-child(1),
+#rowC .cell:nth-child(1)
 {
-	border: 1px solid #000;
-	float:left;
-	height: 100px;
-	width:100px;
+	border-left:none;
+}
+
+#rowA .cell:nth-child(3),
+#rowB .cell:nth-child(3),
+#rowC .cell:nth-child(3)
+{
+	border-right:none;
+}
+
+#rowA .cell
+{
+	border-top:none;
+}
+#rowC .cell
+{
+	border-bottom:none;
 }
 #button
 {

@@ -1,4 +1,4 @@
-# TicTacToe
+# Tic Tac Toe
 
 A TicTacToe game in <em>HTML </em>and <em>Pure JavaScript</em>.
 

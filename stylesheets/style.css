@@ -34,7 +34,7 @@ body
 #wrapper
 {	
 	border: 10px solid transparent;
-	margin: 75px auto auto;
+	margin: 50px auto auto;
 	display:table;
 	font-size:80px;
 	text-align:center;
@@ -120,6 +120,45 @@ body
 {
 	color:#ffc136 ;
 }
-@media(max-width:768px){
 
+/*Score Keeper styling marker-start*/
+
+#scoreKeeper
+{
+	max-width:400px;
+	margin: 10px auto 0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: no-wrap;
+	font-size:14px	;
+	box-sizing: border-box;
+}
+.score
+{
+	background:#fff;
+	background:linear-gradient(180deg, #e1b1f4 20%, #af04d7);
+	margin:0 5px;
+	width:50%;
+	border-bottom: 2px solid #af04d7;
+	border-radius:8px;
+	box-shadow: 0 4px 5px rgba(0,0,0,.16);
+	padding:2px;
+	transition: 0.2s;
+}
+.player
+{
+	float:left;
+	margin-left:15px;
+	font-weight: bold;
+}
+.value
+{
+	float:right;
+	margin-right: 15px;
+	font-weight: bold;
+}
+.active
+{
+	border-color:#14bdac;
 }

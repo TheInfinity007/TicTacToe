@@ -15,10 +15,18 @@ var player;
 var cells = document.querySelectorAll(".cell");
 var resultText = document.querySelector("#result");
 var message = document.querySelector("#message");
+// scorekeeper variables
+var scoreO = 0;
+var scoreX = 0;
+var displayO = document.querySelector("#displayO");
+var displayX = document.querySelector("#displayX");	
+var scores = document.querySelectorAll(".score");
 startGame();
 function startGame(){
 	nineClick = 0;
 	resultText.innerText = "";
+	scores[0].classList.remove("active");
+	scores[1].classList.remove("active");
 	resultText.classList.remove("resultO");
 	resultText.classList.remove("resultX");
 	message.innerText = "Start Game";
@@ -35,6 +43,13 @@ function startGame(){
 
 function turnClick(event){
 	switchTurn();
+	if(player == "X"){
+		scores[1].classList.add("active");
+		scores[0].classList.remove("active");
+	}else{
+		scores[0].classList.add("active");
+		scores[1].classList.remove("active");
+	}
 	resultText.innerText = "";
 	turn(event.target.id, player);
 }
@@ -98,18 +113,23 @@ function gameOver(result){
 			for(let index of winCombos[result.index]){
 				document.getElementById(index).classList.add("resultO");
 			}
+			scoreO++;
+			displayO.innerText = scoreO;
 			resultText.classList.add("resultO");
 			resultText.classList.remove("resultX");
 		}else{
 			for(let index of winCombos[result.index]){
 				document.getElementById(index).classList.add("resultX");
 			}
+			scoreX++;
+			displayX.innerText = scoreX;
 			resultText.classList.add("resultX");
 			resultText.classList.remove("resultO");
 		}
 		resultText.innerText = "Player " + result.player + " won";
 	}else{
 		resultText.innerText = "Game Draw";
+		resultText.classList.add("resultX");
 	}
 	// resultText.classList.add("result");
 	for(var i = 0; i < cells.length; i++){

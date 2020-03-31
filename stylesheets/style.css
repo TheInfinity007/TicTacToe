@@ -1,14 +1,39 @@
+*
+{
+	padding:0;
+	margin:0;
+}
 body
 {
-	background: yellow;
+	background: #26192b;
 	margin:0;
-	font-family: "Lucida Grande", sans-serif, Arial;
-	font-weight: 300;
 	padding:0;
+	font-family: "Montserrat", "Avenir";
+	text-align:center;
+}
+#heading
+{
+	color:white;
+	text-align:center;
+	background: #af04d7;
+	text-transform: uppercase;
+	line-height: 1.1;
+	padding:20px 0;
+	width:100%;
+}
+#stripe
+{
+	background: #cebfd8;
+	padding: 2px 0;
+}
+#message
+{
+	color:#000;
+	font-size:1.1em;
 }
 #wrapper
 {	
-	border: 10px solid gray;
+	border: 10px solid transparent;
 	margin: 75px auto auto;
 	display:table;
 	font-size:80px;
@@ -16,11 +41,11 @@ body
 }
 .cell
 {
-	border: 1px solid #000;
+	border: 2px solid #af04d7;
 	float:left;
 	width:100px;
 	height: 100px;
-	background: pink;
+	background: transparent;
 }
 
 #rowA .cell:nth-child(1),
@@ -44,19 +69,57 @@ body
 #rowC .cell
 {
 	border-bottom:none;
-}
-#button
-{
-	clear: left;
-	background: #2d2d2d;
-	border: 1px solid #000;
-}
+}	
 #reset
 {
-	color:#fff;
-	background:none;
-	border:none;
+	margin-top:25px;
+	color:#14bdac;
+	border:2px solid #14bdac;
+	border-radius:20px;
+	background: transparent;
 	outline: none;
-	padding: 18px 73px;
-	font-size:60px;
+	padding: 6px 20px;
+	font-size:40px;
+	text-align: center;
+}
+#reset:hover
+{
+	color:#fff;
+	border:2px solid #14bdac;
+	border-radius:20px;
+	background: #14bdac;
+	outline: none;
+	padding: 6px 20px;
+	font-size:40px;
+	text-align: center;
+}
+#result
+{
+	height:50px;
+	font-size: 2.4em;
+}
+.result
+{
+    color: #26192b;
+}
+.resultO
+{
+	background:#aaece9;
+	color: #26192b !important;
+}
+.resultX
+{
+	background:#ffc136; 
+	color: #26192b !important;
+}
+.playerO
+{
+	color:#aaece9;
+}
+.playerX
+{
+	color:#ffc136 ;
+}
+@media(max-width:768px){
+
 }
